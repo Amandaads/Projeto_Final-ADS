@@ -3,7 +3,14 @@ package com.multidisciplinar.ProjetoFinal.Domain;
 import java.util.Date;
 import java.util.UUID;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,13 +32,19 @@ public class Paciente {
     @JoinColumn(name="id_usuario", nullable=false)
     private Usuario usuario;
 
-    
+    @Column(name="Nome_completo")
     private String nomeCompleto;
-    private String cpf;
-    private Date dataNascimento;
-    private String telefone;
-    private String endereço;
-    
 
+    @Column(name="Cpf")
+    private String cpf;
+
+    @Column(name="Data_Nascimento")
+    private Date dataNascimento;
+
+    @Column(name="Telefone")
+    private String telefone;
+
+    @Column(name="Endereço")
+    private String endereço;
     
 }

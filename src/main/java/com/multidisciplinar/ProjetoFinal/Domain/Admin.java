@@ -1,5 +1,6 @@
 package com.multidisciplinar.ProjetoFinal.Domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,10 +28,7 @@ public class Admin {
     @JoinColumn(name="id_usuario", nullable=false)
     private Usuario usuario;
 
+    @Column(name="Nome_Completo")
     private String nomeCompleto;
-
-    public Admin() {
-    }
-
 
 }
