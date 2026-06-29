@@ -48,12 +48,12 @@ O projeto segue o padrão arquitetural em camadas para facilitar a manutenção 
 
 
 Endpoints da API
-👥 Módulo de Pacientes
+Pacientes
 POST /pacientes: Cadastra um novo paciente e cria automaticamente suas credenciais de acesso vinculadas na tabela de usuários (CascadeType.ALL).
 
 PUT /pacientes/{id}: Atualiza dados específicos (Nome, Telefone, Endereço, Nascimento) de um paciente existente baseado no seu UUID.
 
-🩺 Módulo de Médicos
+Médicos
 POST /medicos: Cadastra um médico associando o seu CRM, especialidade e criando seu login com perfil MEDICO.
 
 PUT /medicos/{id}: Atualiza informações profissionais e de contato do médico.
