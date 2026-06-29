@@ -48,36 +48,53 @@ O projeto segue o padrão arquitetural em camadas para facilitar a manutenção 
 
 
 Endpoints da API
+
 Pacientes
+
 POST /pacientes: Cadastra um novo paciente e cria automaticamente suas credenciais de acesso vinculadas na tabela de usuários (CascadeType.ALL).
 
 PUT /pacientes/{id}: Atualiza dados específicos (Nome, Telefone, Endereço, Nascimento) de um paciente existente baseado no seu UUID.
 
 Médicos
+
 POST /medicos: Cadastra um médico associando o seu CRM, especialidade e criando seu login com perfil MEDICO.
 
 PUT /medicos/{id}: Atualiza informações profissionais e de contato do médico.
 
 
-📝 Exemplos de Requisições (JSON)
-Cadastro de Paciente (POST /pacientes)
+# Exemplos de Requisições (JSON)
+
+
+Cadastro de Paciente 
+
+(POST /pacientes)
+
 JSON
 {
+
     "nome": "Carlos Silva",
     "cpf": "12345678901",
     "telefone": "11999998888",
-    "dataNascimento": "1995-10-25",
+    "nascimento": "1995-10-25",
     "endereco": "Rua das Flores, 123",
     "email": "carlos.paciente@email.com",
     "senha": "senhaDoPaciente123"
 }
-Cadastro de Médico (POST /medicos)
+
+
+Cadastro de Médico
+
+(POST /medicos)
+
 JSON
 {
+
     "nome": "Dr. Arnaldo Almeida",
     "crm": "CRM/SP 123456",
     "especialidade": "Cardiologia",
     "telefone": "11988887777",
     "email": "arnaldo.medico@hospital.com",
     "senha": "senhaDoMedico123"
+    
 }
+
