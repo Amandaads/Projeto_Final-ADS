@@ -1,16 +1,10 @@
 package com.multidisciplinar.ProjetoFinal.Domain;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.UUID;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,23 +22,23 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @OneToOne
-    @JoinColumn(name="id_usuario", nullable=false)
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="usuario_id", nullable=false, referencedColumnName = "id")
     private Usuario usuario;
 
-    @Column(name="Nome_completo")
-    private String nomeCompleto;
+    @Column(name="nome")
+    private String nome;
 
-    @Column(name="Cpf")
+    @Column(name="cpf", unique = true)
     private String cpf;
 
-    @Column(name="Data_Nascimento")
-    private Date dataNascimento;
+    @Column(name="nascimento")
+    private String nascimento;
 
-    @Column(name="Telefone")
+    @Column(name="telefone")
     private String telefone;
 
-    @Column(name="Endereço")
-    private String endereço;
+    @Column(name="endereco")
+    private String endereco;
     
 }
