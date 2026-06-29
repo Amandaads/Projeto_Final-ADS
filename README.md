@@ -1,6 +1,6 @@
 # 🏥 Projeto Final - Sistema de Gestão Multidisciplinar Hospitalar
 
-Este é o back-end de um sistema de gestão hospitalar desenvolvido como Projeto Final/TCC. A aplicação consiste em uma API REST robusta construída com Spring Boot, responsável por gerenciar o fluxo de usuários, pacientes e médicos, garantindo a consistência dos dados através de relacionamentos mapeados com Hibernate/JPA.
+Este é o back-end de um sistema de gestão hospitalar desenvolvido como Projeto Final. A aplicação consiste em uma API REST robusta construída com Spring Boot, responsável por gerenciar o fluxo de usuários, pacientes e médicos.
 
 ---
 
