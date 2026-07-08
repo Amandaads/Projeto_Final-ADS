@@ -40,6 +40,7 @@ public class PacienteService {
         paciente.setEndereco(data.endereco());
 
         paciente.setUsuario(usuarioLog);
+
         Paciente pacienteSalvo = pacienteRepository.save(paciente);
         return new ResponsePacienteDTO(
                 pacienteSalvo.getId(),
