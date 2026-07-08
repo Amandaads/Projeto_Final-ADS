@@ -1,4 +1,12 @@
 package com.multidisciplinar.ProjetoFinal.DTO;
 
-public record ResponseProfDTO() {
+import java.util.UUID;
+
+public record ResponseProfDTO(
+            UUID id,
+            String nome,
+            String matricula,
+            String cargo,
+            String telefone
+) {
 }
